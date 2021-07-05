@@ -1,0 +1,42 @@
+body{
+    font-family: 'Bad Script', cursive;
+}
+header {
+    grid-area: header;
+}
+
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr  auto;
+    grid-template-areas:    'header'
+                            'main'
+                            'footer';
+}
+form{
+    width: 500px;
+    height: 200px;
+}
+
+small+small {
+    display: none;
+}
+
+input:valid+small+small {
+    display: inline;
+}
+
+input:valid+small {
+    display: none;
+}
